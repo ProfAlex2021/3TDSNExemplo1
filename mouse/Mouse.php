@@ -75,7 +75,7 @@ class Mouse extends Periferico implements JsonSerializable{
         try {
             parent::update();
             $this->periferico = $this->cod;
-            \Conexao::fabricarConexao()->abrir()->exec("UPDATE `mouse` SET `botoes`=$this->botoes WHERE `periferico` = $this->periferico");
+            \Conexao::fabricarConexao()->abrir()->exec("UPDATE `mouse` SET `botoes`=" . (int)$this->botoes . " WHERE `periferico` = $this->periferico");
         } catch (\Exception $e) {
             die("Erro: " . $e->getMessage());
         }

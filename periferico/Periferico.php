@@ -43,8 +43,8 @@ class Periferico
                     `modelo`='$this->modelo',
                     `cor`='$this->cor',
                     `formato`='$this->formato',
-                    `cabo`=$this->cabo,
-                    `wireless`=$this->wireless
+                    `cabo`=" . (int)$this->cabo . ",
+                    `wireless`=" . (int)$this->wireless . "
                 WHERE
                     `cod` = $this->cod");
         } catch (\Exception $e) {

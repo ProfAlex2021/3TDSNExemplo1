@@ -5,6 +5,7 @@ $metodo = $_SERVER['REQUEST_METHOD'];
 
 include_once "../../conexao.php";
 include_once "../Mouse.php";
+include_once "../../ParseInputStream.php";
 switch ($metodo) {
     case $config['http'][0]: //GET = listar ou ler apenas um (cod)
         if (!isset($_GET['cod']))
@@ -16,8 +17,8 @@ switch ($metodo) {
         Hardware\Mouse::fromArray($_POST)->create();
         break;
     case $config['http'][2]: //PUT = editar / atualizar dados
-        parse_str(file_get_contents('php://input'), $dados);
-        var_dump($dados);
+        $dados = [];
+        new ParseInputStream($dados);
         Hardware\Mouse::fromArray($dados)->update();
         break;
     case $config['http'][3]: //DELETE = deletar / excluir
