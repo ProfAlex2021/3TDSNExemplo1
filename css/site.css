@@ -1,0 +1,17 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: lightgreen;
+}
+
+.container{
+    background-color: white;
+    height: 100vh;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+}
