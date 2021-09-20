@@ -3,7 +3,7 @@ html, body{
 }
 
 body{
-    background-color: lightgreen;
+    background-color: lightslategrey;
 }
 
 .container{
@@ -14,4 +14,7 @@ body{
 footer{
     position: absolute;
     bottom: 0px;
+}
+.flip-horizontal{
+    transform: scale(-1,1);
 }

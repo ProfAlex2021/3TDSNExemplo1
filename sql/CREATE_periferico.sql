@@ -22,8 +22,13 @@ CREATE TABLE IF NOT EXISTS `periferico` (
 -- Despejando dados para a tabela `periferico`
 --
 
-INSERT INTO `periferico` (`cod`, `marca`, `modelo`, `cor`, `formato`, `cabo`, `wireless`) VALUES
-(1, 'Logitech', 'G900s', 'preto', 'ergonômico', 1, 1);
+INSERT INTO `periferico` (`marca`, `modelo`, `cor`, `formato`, `cabo`, `wireless`) VALUES
+('Logitech', 'G900s', 'preto', 'ergonômico', 1, 1),
+('Logitech', 'G900s', 'preto', 'ergonômico', 1, 1),
+('Logitech', 'G900s', 'preto', 'ergonômico', 1, 1),
+('Logitech', 'G900s', 'preto', 'ergonômico', 1, 1),
+('Logitech', 'G900s', 'preto', 'ergonômico', 1, 1)
+;
 
 -- --------------------------------------------------------
 
@@ -42,5 +47,9 @@ CREATE TABLE IF NOT EXISTS `mouse` (
 --
 
 INSERT INTO `mouse` (`periferico`, `botoes`) VALUES
-(1, 11);
+(1, 11),
+(2,4),
+(3,6),
+(4,7)
+;
 
